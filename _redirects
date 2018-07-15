@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://de-linksche-hobby.netlify.com/* https://delinkschehobby.nl/:splat 301!
