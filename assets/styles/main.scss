@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 @font-face {
     font-family: 'Playfair Display';
@@ -10,6 +10,7 @@ h1 {
     font-weight: 700;
     font-size: 34px;
     line-height: 40px;
+    margin: 0;
 
     @media (min-width: 1200px) {
         font-size: 45px;
@@ -17,15 +18,32 @@ h1 {
     }
 }
 
-p {
-    font-family: 'Crimson Text';
+p,
+strong,
+span,
+.btn {
+    font-family: 'Lato';
     font-size: 15px;
     line-height: 24px;
     margin: 24px 0;
+    opacity: .87;
 
     @media (min-width: 1200px) {
         font-size: 16px;
     }
+}
+
+strong {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    background: #000;
+    margin-right: 20px;
 }
 
 body {
@@ -63,9 +81,39 @@ body {
     }
 }
 
-.content {
-    h1,
-    p {
-        opacity: .87;
+.cookiebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: white;
+    transition: all .15s ease-in-out;
+
+    .cookiebar__content {
+        padding: 10px 15px;
+
+        strong {
+            font-size: 15px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+        transition: all .10s ease-in-out;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    &.closed {
+        transform: translateY(100%);
     }
 }
