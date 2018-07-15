@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Crimson Text';
+    src: url(../fonts/CrimsonText/CrimsonText-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(../fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf) format(truetype);
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+
+    @media (min-width: 1200px) {
+        font-size: 45px;
+        line-height: 48px;
+    }
+}
+
+p {
+    font-family: 'Crimson Text';
+    font-size: 15px;
+    line-height: 24px;
+    margin: 24px 0;
+
+    @media (min-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, #fdfbfb, #ebedee);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 0 20px;
+
+    // SM
+    @media (min-width: 576px) {
+        width: 540px;
+    }
+
+    // MD
+    @media (min-width: 768px) {
+        width: 720px;
+    }
+
+    // LG
+    @media (min-width: 992px) {
+        width: 960px;
+    }
+
+    // XL
+    @media (min-width: 1200px) {
+        width: 1140px;
+    }
+}
+
+.content {
+    h1,
+    p {
+        opacity: .87;
+    }
+}
